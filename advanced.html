@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ultimate Calculator</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="Calculator" />
+        <meta name="author" content="Ninad Kulkarni" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="This is a simple calculator website, which can do many type of calculations. It can also take your small math text." />
+        <script src="js/advScript.js"></script>
+        <link crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <img class="bi me-2" width="40" height="40" src="assets/Calculator icon.ico"/>
+                    <span class="fs-4">Any Calculator</span>
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Standard</a></li>
+                    <li class="nav-item"><a href="" class="nav-link active">Advanced</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
+                </ul>
+            </header>
+        </div>
+        <div class="container py-4">
+            <div class="row align-items-md-stretch">
+                <!--Square-->
+                <div class="col-md-4" style="padding: 12px">
+                    <div class="h-100 p-5 bg-dark border rounded-3">
+                        <h2 class="mb-4 text-bg-dark">Square</h2>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Enter Number" aria-label="Recipient's username with two button addons" id="sqText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='sqFunc()'>Ok</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("sqText")'>Clear</button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Answer</span>
+                            <input type="number" readonly class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="sqAns">
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Let's learn!</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">What is a square?</h6>
+                                <p class="card-text" style="text-align: justify;">When a number is multiplied by itself, the resultant number is known as its square.</p>
+                                <p class="card-text">For example, 2 x 2 = 4.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Square root-->
+                <div class="col-md-4" style="padding: 12px">
+                    <div class="h-100 p-5 bg-dark border rounded-3">
+                        <h2 class="mb-4 text-bg-dark">Square Root</h2>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Enter Number" aria-label="Recipient's username with two button addons" id="sqRootText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='sqRootFunc()'>Ok</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("sqRootText")'>Clear</button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Answer</span>
+                            <input type="number" readonly class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="sqRootAns">
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Let's learn!</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">What is a square root?</h6>
+                                <p class="card-text" style="text-align: justify;">It is the number whose product by itself gives the original number. It is represented using the symbol '√'.</p>
+                                <p class="card-text">For example, √4 = 2.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Cube-->
+                <div class="col-md-4" style="padding: 12px">
+                    <div class="h-100 p-5 bg-dark border rounded-3">
+                        <h2 class="mb-4 text-bg-dark">Cube</h2>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Enter Number" aria-label="Recipient's username with two button addons" id="cuText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick="cuFunc()">Ok</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("cuText")'>Clear</button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Answer</span>
+                            <input type="number" readonly class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="cuAns">
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Let's learn!</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">What is a cube?</h6>
+                                <p class="card-text" style="text-align: justify;">When a number is multiplied by the same number three times, the resultant number is known as a cube number.</p>
+                                <p class="card-text">For example, 2 x 2 x 2 = 8.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Cube root-->
+                <div class="col-md-4" style="padding: 12px">
+                    <div class="h-100 p-5 bg-dark border rounded-3">
+                        <h2 class="mb-4 text-bg-dark">Cube Root</h2>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Enter Number" aria-label="Recipient's username with two button addons" id="cuRootText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick="cuRootFunc()">Ok</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("cuRootText")'>Clear</button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Answer</span>
+                            <input type="number" readonly class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="cuRootAns">
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Let's learn!</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">What is a cube root?</h6>
+                                <p class="card-text" style="text-align: justify;">It is the number whose product by itself 3 times gives the original number. It is represented using the symbol '∛'.</p>
+                                <p class="card-text">For example, ∛8 = 2.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Summation-->
+                <div class="col-md-4" style="padding: 12px">
+                    <div class="h-100 p-5 bg-dark border rounded-3">
+                        <h2 class="mb-4 text-bg-dark">Summation</h2>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Enter Number" aria-label="Recipient's username with two button addons" id="sumText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" id="sumFunc()">Ok</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("sumText")'>Clear</button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Answer</span>
+                            <input type="number" readonly class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="sumAns">
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Let's learn!</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">What is a summation?</h6>
+                                <p class="card-text" style="text-align: justify;">In mathematics, summation is the addition of a sequence of any kind of numbers the result is their sum or total.</p>
+                                <p class="card-text">For example, Σ3 = 1 + 2 = 3 = 6.</p>
+                                <a href="https://en.wikipedia.org/wiki/Summation" class="card-link">More Info on Wiki</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Factorial-->
+                <div class="col-md-4" style="padding: 12px">
+                    <div class="h-100 p-5 bg-dark border rounded-3">
+                        <h2 class="mb-4 text-bg-dark">Factorial</h2>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Number" aria-label="Recipient's username with two button addons">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button">Ok</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("sqRootText")'>Clear</button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Answer</span>
+                            <input type="text" readonly class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Let's learn!</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">What is a factorial?</h6>
+                                <p class="card-text" style="text-align: justify;">The factorial of a number is the function that multiplies the number by every natural number below it. Symbolically, factorial can be represented as "!".</p>
+                                <p class="card-text">For example, 3! = 3 x 2 x 1 = 6.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
