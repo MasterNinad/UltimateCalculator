@@ -13,7 +13,8 @@ function principalFunc() {
         principal.value = ans;
     }
     else {
-        var ans = intrest.value / (rate.value * years.value);
+        var percentRate = rate.value / 100;
+        var ans = intrest.value / (percentRate * years.value);
         principal.value = ans;
     }
 }
