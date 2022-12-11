@@ -25,6 +25,7 @@ function rateFunc() {
     }
     else {
         var ans = intrest.value / (principal.value * years.value);
-        rate.value = ans * 100 + "%";
+        rate.value = ans;
+        document.getElementById("ratePercentText").value = ans * 100 + "%";
     }
 }
