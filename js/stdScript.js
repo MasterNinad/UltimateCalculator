@@ -23,10 +23,6 @@ function appendText(text) {
     ans.value += text.value;
 }
 
-function clearText() {
-    document.getElementById("answer").value = " ";
-}
-
 function lastClearText() {
     let text = document.getElementById("answer").value;
     let result = text.slice(0, -1);
