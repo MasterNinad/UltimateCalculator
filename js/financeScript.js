@@ -8,7 +8,7 @@ function principalFunc() {
     if (intrest.value == "" || rate.value == "" || years.value == "") {
         console.log("error");
     }
-    else if (intrest.value != "" || amount.value != "") {
+    else if (intrest.value != "" && amount.value != "") {
         var ans = amount.value - intrest.value;
         principal.value = ans;
     }
