@@ -5,7 +5,7 @@ var amount = document.getElementById("amountText");
 var intrest = document.getElementById("intrestText");
 
 function principalFunc() {
-    if (intrest.value == "" || rate.value == "" || time.value == "") {
+    if (intrest.value == "" || rate.value == "" || years.value == "") {
         console.log("error");
     }
     else if (intrest.value != "" || amount.value != "") {
@@ -13,17 +13,17 @@ function principalFunc() {
         principal.value = ans;
     }
     else {
-        var ans = intrest.value / rate.value * time.value;
+        var ans = intrest.value / rate.value * years.value;
         principal.value = ans;
     }
 }
 
 function rateFunc() {
-    if (intrest.value == "" || principal.value == "" || time.value == "") {
+    if (intrest.value == "" || principal.value == "" || years.value == "") {
         console.log("error");
     }
     else {
-        var ans = intrest.value / principal.value * time.value;
+        var ans = intrest.value / principal.value * years.value;
         rate.value = ans;
     }
 }
