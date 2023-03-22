@@ -73,6 +73,6 @@ function intrestFunc() {
     }
     else {
         let ans = (principal.value * rate.value * years.value) / 100;
-        intrest.value = ans;
+        interest.value = ans;
     }
 }
