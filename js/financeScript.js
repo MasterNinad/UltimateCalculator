@@ -20,8 +20,14 @@ function principalFunc() {
 }
 
 function rateFunc() {
-    if (interest.value == "" || principal.value == "" || years.value == "") {
-        console.log("error");
+    if (interest.value == "") {
+        alert("Please enter Interest to find Rate!");
+    }
+    else if (principal.value == "") {
+        alert("Please enter Principal to find Rate!");
+    }
+    else if (years.value == "") {
+        alert("Please enter Years to find Rate!");
     }
     else {
         let ans = interest.value / (principal.value * years.value);
@@ -32,7 +38,7 @@ function rateFunc() {
 
 function yearsFunc() {
     if (interest.value == "") {
-        alert("Please enter Intrest to find Years!");
+        alert("Please enter Interest to find Years!");
     }
     else if (principal.value == "") {
         alert("Please enter Principal to find Years!");
@@ -47,29 +53,29 @@ function yearsFunc() {
 }
 
 function amountFunc() {
-    if (intrest.value == "") {
+    if (interest.value == "") {
         alert("Please enter Intrest to find Amount!");
     }
     else if (principal.value == "") {
         alert("Please enter Principal to find Amount!");
     }
     else {
-        amount.value = intrest.value + principal.value;
+        amount.value = interest.value + principal.value;
     }
 }
 
 function intrestFunc() {
     if (amount.value != "" && principal.value != "") {
-        intrest.value = amount.value - principal.value;
+        interest.value = amount.value - principal.value;
     }
     else if (principal.value == "") {
-        alert("Please enter Principal to find Intrest!");
+        alert("Please enter Principal to find Interest!");
     }
     else if (rate.value == "") {
-        alert("Please enter Rate to find Intrest!");
+        alert("Please enter Rate to find Interest!");
     }
     else if (years.value == "") {
-        alert("Please enter Years to find Intrest!");
+        alert("Please enter Years to find Interest!");
     }
     else {
         let ans = (principal.value * rate.value * years.value) / 100;
