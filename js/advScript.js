@@ -20,7 +20,7 @@ function cuRootFunc() {
 
 function sumFunc() {
     const sumText = document.getElementById("sumText").value;
-    let ans = 1;
+    let ans = 0;
     for (let i = 1; i <= sumText; i++) {
         ans = ans + i;
     }
