@@ -20,9 +20,18 @@ function cuRootFunc() {
 
 function sumFunc() {
     const sumText = document.getElementById("sumText").value;
-    const ans = 1;
+    let ans = 1;
     for (let i = 1; i <= sumText; i++) {
         ans = ans + i;
     }
     document.getElementById("sumAns").value = ans;
+};
+
+function facFunc() {
+    const facText = document.getElementById("facText").value;
+    let ans = 1;
+    for (let i = 1; i <= facText; i++) {
+        ans = ans * i;
+    }
+    document.getElementById("facAns").value = ans;
 };
