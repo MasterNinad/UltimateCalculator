@@ -36,34 +36,34 @@
                         <h2 class="mb-4 text-bg-dark">Simple interest</h2>
                         <!--Principal-->
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="Principal" aria-label="Principal" id="principalText">
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='principalFunc()'>=</button>
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("principalText")'>Clear</button>
+                            <input type="number" class="form-control" placeholder="Principal" aria-label="Principal" id="SIprincipalText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='SIprincipalFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("SIprincipalText")'>Clear</button>
                         </div>
                         <!--Years-->
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="Years" aria-label="Years" id="yearsText">
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='yearsFunc()'>=</button>
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("yearsText")'>Clear</button>
+                            <input type="number" class="form-control" placeholder="Years" aria-label="Years" id="SIyearsText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='SIyearsFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("SIyearsText")'>Clear</button>
                         </div>
                         <!--Rate-->
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="Rate" aria-label="Rate" id="rateText">
-                            <span class="input-group-text" id="ratePercentText">%</span>
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='rateFunc()'>=</button>
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("rateText", "ratePercentText")'>Clear</button>
+                            <input type="number" class="form-control" placeholder="Rate" aria-label="Rate" id="SIrateText">
+                            <span class="input-group-text" id="SIratePercentText">%</span>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='SIrateFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("SIrateText", "SIratePercentText")'>Clear</button>
                         </div>
                         <!--Amount-->
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="Amount" aria-label="Amount" id="amountText">
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='amountFunc()'>=</button>
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("amountText")'>Clear</button>
+                            <input type="number" class="form-control" placeholder="Amount" aria-label="Amount" id="SIamountText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='SIamountFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("SIamountText")'>Clear</button>
                         </div>
                         <!--Interest-->
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="Interest" aria-label="interest" id="interestText">
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='intrestFunc()'>=</button>
-                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("interestText")'>Clear</button>
+                            <input type="number" class="form-control" placeholder="Interest" aria-label="interest" id="SIinterestText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='SIintrestFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("SIinterestText")'>Clear</button>
                         </div>
 
                         <div class="card">
@@ -76,8 +76,56 @@
                         </div>
                     </div>
                 </div>
+
+                <!--Compound interest-->
+                <div class="col-md-4" style="padding: 12px">
+                    <div class="h-100 p-5 bg-dark border rounded-3">
+                        <h2 class="mb-4 text-bg-dark">Compound interest</h2>
+                        <!--Principal-->
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Principal" aria-label="Principal" id="CIprincipalText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='CIprincipalFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("CIprincipalText")'>Clear</button>
+                        </div>
+                        <!--Years-->
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Years" aria-label="Years" id="CIyearsText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='CIyearsFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("CIyearsText")'>Clear</button>
+                        </div>
+                        <!--Rate-->
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Rate" aria-label="Rate" id="CIrateText">
+                            <span class="input-group-text" id="CIratePercentText">%</span>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='CIrateFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("CIrateText", "CIratePercentText")'>Clear</button>
+                        </div>
+                        <!--Amount-->
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Amount" aria-label="Amount" id="CIamountText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='CIamountFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("CIamountText")'>Clear</button>
+                        </div>
+                        <!--Interest-->
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="Interest" aria-label="interest" id="CIinterestText">
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='CIintrestFunc()'>=</button>
+                            <button class="btn btn-outline-secondary text-bg-dark" type="button" onclick='clearText("CIinterestText")'>Clear</button>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Let's learn!</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">What is Simple Interest?</h6>
+                                <p class="card-text" style="text-align: justify;">Compound interest is the addition of interest to the principal sum of a loan or deposit, or in other words, interest on principal plus interest.</p>
+                                <a href="https://en.wikipedia.org/wiki/Compound_interest" class="card-link">More Info on Wiki</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <script src="js/financeScript.js"></script>
+        <script src="js/financeScripts/simpleIntrestScript.js"></script>
+        <script src="js/financeScripts/compoundIntrestScript.js"></script>
     </body>
 </html>

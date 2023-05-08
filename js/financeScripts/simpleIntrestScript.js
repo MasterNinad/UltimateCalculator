@@ -1,10 +1,10 @@
-let principal = document.getElementById("principalText");
-let years = document.getElementById("yearsText");
-let rate = document.getElementById("rateText");
-let amount = document.getElementById("amountText");
-let interest = document.getElementById("interestText");
+let principal = document.getElementById("SIprincipalText");
+let years = document.getElementById("SIyearsText");
+let rate = document.getElementById("SIrateText");
+let amount = document.getElementById("SIamountText");
+let interest = document.getElementById("SIinterestText");
 
-function principalFunc() {
+function SIprincipalFunc() {
     if (interest.value == "" || rate.value == "" || years.value == "") {
         console.log("error");
     }
@@ -19,7 +19,7 @@ function principalFunc() {
     }
 }
 
-function rateFunc() {
+function SIrateFunc() {
     if (interest.value == "") {
         alert("Please enter Interest to find Rate!");
     }
@@ -36,7 +36,7 @@ function rateFunc() {
     }
 }
 
-function yearsFunc() {
+function SIyearsFunc() {
     if (interest.value == "") {
         alert("Please enter Interest to find Years!");
     }
@@ -52,7 +52,7 @@ function yearsFunc() {
     }
 }
 
-function amountFunc() {
+function SIamountFunc() {
     if (interest.value == "") {
         alert("Please enter Intrest to find Amount!");
     }
@@ -64,7 +64,7 @@ function amountFunc() {
     }
 }
 
-function intrestFunc() {
+function SIintrestFunc() {
     if (amount.value != "" && principal.value != "") {
         interest.value = amount.value - principal.value;
     }
