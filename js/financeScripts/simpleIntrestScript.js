@@ -20,48 +20,58 @@ function SIprincipalFunc() {
 }
 
 function SIrateFunc() {
-    if (interest.value == "") {
-        alert("Please enter Interest to find Rate!");
-    }
-    else if (principal.value == "") {
-        alert("Please enter Principal to find Rate!");
-    }
-    else if (years.value == "") {
-        alert("Please enter Years to find Rate!");
-    }
-    else {
-        let ans = interest.value / (principal.value * years.value);
-        rate.value = ans;
-        document.getElementById("ratePercentText").innerHTML = ans * 100 + "%";
-    }
+    if (interest.value === "") {
+        alert("Please enter interest to find rate.");
+        return;
+      }
+    
+      if (principal.value === "") {
+        alert("Please enter principal to find rate.");
+        return;
+      }
+    
+      if (years.value === "") {
+        alert("Please enter years to find rate.");
+        return;
+      }
+    
+      const ans = interest.value / (principal.value * years.value);
+      rate.value = ans;
+      document.getElementById("ratePercentText").innerHTML = (ans * 100).toFixed(2) + "%";
 }
 
 function SIyearsFunc() {
     if (interest.value == "") {
         alert("Please enter Interest to find Years!");
+        return;
     }
-    else if (principal.value == "") {
+    
+    if (principal.value == "") {
         alert("Please enter Principal to find Years!");
+        return;
     }
-    else if (rate.value == "") {
+
+    if (rate.value == "") {
         alert("Please enter Rate to find Years!");
+        return;
     }
-    else {
-        let ans = (100 * interest.value) / (principal.value * rate.value);
-        years.value = ans;
-    }
+
+    let ans = (100 * interest.value) / (principal.value * rate.value);
+    years.value = ans;
 }
 
 function SIamountFunc() {
     if (interest.value == "") {
         alert("Please enter Intrest to find Amount!");
+        return;
     }
-    else if (principal.value == "") {
+
+    if (principal.value == "") {
         alert("Please enter Principal to find Amount!");
+        return;
     }
-    else {
-        amount.value = interest.value + principal.value;
-    }
+    
+    amount.value = interest.value + principal.value;
 }
 
 function SIintrestFunc() {
