@@ -83,7 +83,8 @@ function SIamountFunc() {
         return;
     }
     
-    amount.value = interest.value + principal.value;
+    let ans = Number(interest.value) + Number(principal.value);
+    amount.value = ans.toString();
 }
 
 function SIintrestFunc() {
