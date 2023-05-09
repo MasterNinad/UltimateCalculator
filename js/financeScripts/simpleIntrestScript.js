@@ -5,18 +5,30 @@ let amount = document.getElementById("SIamountText");
 let interest = document.getElementById("SIinterestText");
 
 function SIprincipalFunc() {
-    if (interest.value == "" || rate.value == "" || years.value == "") {
-        console.log("error");
-    }
-    else if (interest.value != "" && amount.value != "") {
+    if (interest.value != "" && amount.value != "") {
         let ans = amount.value - interest.value;
         principal.value = ans;
+        return;
     }
-    else {
-        let percentRate = rate.value / 100;
-        let ans = interest.value / (percentRate * years.value);
-        principal.value = ans;
+
+    if (interest.value == "") {
+        alert("Please enter interest to find principle.");
+        return;
     }
+
+    if (rate.value == "") {
+        alert("Please enter rate to find principle.");
+        return;
+    }
+
+    if (years.value == "") {
+        alert("Please enter years to find principle.");
+        return;
+    }
+    
+    let percentRate = rate.value / 100;
+    let ans = interest.value / (percentRate * years.value);
+    principal.value = ans;
 }
 
 function SIrateFunc() {
@@ -77,18 +89,24 @@ function SIamountFunc() {
 function SIintrestFunc() {
     if (amount.value != "" && principal.value != "") {
         interest.value = amount.value - principal.value;
+        return;
     }
-    else if (principal.value == "") {
+
+    if (principal.value == "") {
         alert("Please enter Principal to find Interest!");
+        return;
     }
-    else if (rate.value == "") {
+
+    if (rate.value == "") {
         alert("Please enter Rate to find Interest!");
+        return;
     }
-    else if (years.value == "") {
+
+    if (years.value == "") {
         alert("Please enter Years to find Interest!");
+        return;
     }
-    else {
-        let ans = (principal.value * rate.value * years.value) / 100;
-        interest.value = ans;
-    }
+
+    let ans = (principal.value * rate.value * years.value) / 100;
+    interest.value = ans;
 }
