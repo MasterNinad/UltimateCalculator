@@ -1,0 +1,7 @@
+.calButton {
+    transition: transform 0.2s ease;
+}
+
+.calButton:active {
+    transform: scale(0.96);
+}
