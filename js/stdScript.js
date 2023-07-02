@@ -20,7 +20,9 @@ function ansKey(e) {
 
 function appendText(text) {
     let ans = document.getElementById("answer");
-    ans.value += text.value;
+    if (ans.charAt(text.length-1) != validChars) {
+        ans.value += text.value;
+    }
 }
 
 function lastClearText() {
